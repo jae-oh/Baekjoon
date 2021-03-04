@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "list": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "xiosbase": "cpp",
+        "queue": "cpp"
     }
 }
