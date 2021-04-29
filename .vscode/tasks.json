@@ -13,6 +13,7 @@
             "command": "g++",
             "args": [
                 "-g",
+                
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
