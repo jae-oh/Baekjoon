@@ -2,6 +2,8 @@
 
 using namespace std;
 
+//BFS는 최단거리 문제, DFS는 이동한 정점의 값을 가지고 계산 연산하는 경우(재귀적으로 호출되는 경우)
+
 #define X first
 #define Y second // pair에서 first, second를 줄여서 쓰기 위해서 사용
 

@@ -6,8 +6,8 @@ using namespace std;
 //2.not in place sorting 알고리즘
 
 int n;
-int arr[1000001];
-int tmp[1000001];
+int arr[10000001];
+int tmp[10000001];
 
 void merge(int st, int en);
 void merge_sort(int st, int en);
