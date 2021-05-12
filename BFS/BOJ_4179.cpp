@@ -72,7 +72,7 @@ int main()
             }
             if (dist2[nx][ny] >= 0)
                 continue;
-            if (dist1[nx][ny] <= dist2[cur.X][cur.Y] +1 && dist1[nx][ny] != -1) //불이 갇혀있어서 둘다 -1일 때, 지훈이는 갈 수 있다.
+            if (dist1[nx][ny] <= dist2[cur.X][cur.Y] +1 && dist1[nx][ny] != -1) //불이 갇혀있어서 둘다 -1일 때, 지훈이는 갈 수 있다. 만약 dist1 != -1 조건이 없다면, 지훈이는 불이 평생 붙지 않은 곳에도 못가기 때문이다.
                 continue;
 
             dist2[nx][ny] = dist2[cur.X][cur.Y] + 1;
