@@ -23,8 +23,8 @@ int main(){
         l[b].push_back(a);
     }
 
-    st.push(1);
-    isused[1] = 1;
+    st.push(3);
+    isused[3] = 1;
     while(!st.empty()){
         int cur = st.top();
         st.pop();
