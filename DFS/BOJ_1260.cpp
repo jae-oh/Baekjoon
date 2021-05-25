@@ -18,17 +18,25 @@ int main(){
         board[a][b] = 1;
         board[b][a] = 1;
     }
+    
+    /*
+    그래프를 스택DFS로 순회
+    */
 
-    st.push(v);
-    isused[v] = 1;
+    st.push(v); //시작점을 stack에 넣어줌
+    isused[v] = 1; //방문했다는 것을 표시
+    cout << v << ' '; //시작점 출력
+
     while(!st.empty()){
         int cur = st.top();
         st.pop();
-        cout << cur << ' ';
         for(int i=1;i<=n;i++){ 
             if(!isused[i] && board[cur][i]){
-                st.push(i);
+                cout << i << ' ';
+                st.push(cur); //dfs이기 때문에 다시 돌아와서 다른 edge가 있는지 확인해야한다.
+                st.push(i); 
                 isused[i] = 1;
+                break; //break;를 해줘야 깊이 들어갈 수 있다.
             }
         }
     }
