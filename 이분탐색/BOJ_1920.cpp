@@ -1,17 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int n,m,start,last;
+int n,m,st,en;
 int arr[100005];
+
+int BinarySearch(int target, int len);
 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     cin >> n;
-
-    start = 0;
-    last = n;
 
     for(int i=0;i<n;i++)
         cin >> arr[i];
@@ -21,23 +20,21 @@ int main(){
 
     while(m--){
         int a;
-        int mid = (start+last)/2;
         cin >> a;
 
-        while(1){
-            if(a == arr[mid]){
-                cout << 1 << '\n';
-                break;
-            }else if(a > arr[mid]){
-                start = mid+1;
-            }else{ // a < arr[mid]
-                last = mid-1;
-            }
-
-            if(start == last){
-                cout << 0 << '\n';
-                break;
-            }
-        }
+        cout << BinarySearch(a,n) << '\n';
     }
+}
+
+int BinarySearch(int target, int len){
+    int st = 0;
+    int en = len -1;
+
+    while(st <= en){
+        int mid = (st+en)/2;
+        if(arr[mid] == target) return 1;
+        else if(arr[mid] > target) en = mid-1;
+        else st = mid+1; //
+    }
+    return 0;
 }
